@@ -33,9 +33,9 @@ public class Caixa {
         this.grupo = grupo;
     }
 
-    public String status(){
+    public String status() {
         String status = "";
-        if (tempoRestante == 0){
+        if (tempoRestante == 0) {
             status += " esperando clientes";
         } else {
             status += " atendendo grupo " + grupo.getId() + ", tempo restante: " + tempoRestante;

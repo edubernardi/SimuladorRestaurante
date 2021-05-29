@@ -1,9 +1,5 @@
 package com.company;
 
-import org.w3c.dom.ranges.Range;
-
-import java.util.Random;
-
 public class Grupo {
     private int tamanho;
     private int id;

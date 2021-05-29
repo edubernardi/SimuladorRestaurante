@@ -1,12 +1,11 @@
 package com.company;
 
-import java.util.Arrays;
-
 public class Cozinha {
-    private Pedido vazio = new Pedido(-1,-1);
+    private Pedido vazio = new Pedido(-1, -1);
     private Pedido[] pedidos = new Pedido[]{vazio, vazio, vazio};
 
-    public Cozinha() {}
+    public Cozinha() {
+    }
 
     public Pedido[] pedidosProntos() {
         Pedido[] prontos = new Pedido[3];
@@ -30,12 +29,12 @@ public class Cozinha {
         }
     }
 
-    public String status(){
+    public String status() {
         String status = "";
-        for (int i = 0; i < 3; i++){
+        for (int i = 0; i < 3; i++) {
             status += "\nCozinheiro " + (i + 1);
-            if (pedidos[i] == vazio){
-                 status += " esperando pedido";
+            if (pedidos[i] == vazio) {
+                status += " esperando pedido";
             } else {
                 status += " preparando pedido " + pedidos[i].getId() + ", tempo restante: " + pedidos[i].getTempoRestante();
             }

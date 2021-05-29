@@ -11,7 +11,7 @@ public class Assento {
         this.tempoRestante = -1;
     }
 
-    public void sentar(Grupo grupo){
+    public void sentar(Grupo grupo) {
         this.ocupantes = grupo;
     }
 
@@ -19,15 +19,15 @@ public class Assento {
         return ocupantes;
     }
 
-    public void comecaComer(int tempoRestante){
+    public void comecaComer(int tempoRestante) {
         this.tempoRestante = tempoRestante;
     }
 
-    public boolean terminouDeComer(){
-        if (tempoRestante == 0){
+    public boolean terminouDeComer() {
+        if (tempoRestante == 0) {
             return true;
         }
-        if (tempoRestante != -1){
+        if (tempoRestante != -1) {
             tempoRestante--;
         }
         return false;
@@ -37,16 +37,16 @@ public class Assento {
         return tamanho;
     }
 
-    public void sair(){
+    public void sair() {
         this.ocupantes = null;
         this.tempoRestante = -1;
     }
 
-    public String status(){
+    public String status() {
         String status = "";
-        if (ocupantes != null){
-            status += "Grupo " + getOcupantes().getId() +  ", Numero de ocupantes: " + ocupantes.getTamanho();
-            if (tempoRestante == -1){
+        if (ocupantes != null) {
+            status += "Grupo " + getOcupantes().getId() + ", Numero de ocupantes: " + ocupantes.getTamanho();
+            if (tempoRestante == -1) {
                 status += " Aguardando pedido";
             } else {
                 status += ", Comendo, tempo restante: " + tempoRestante;
